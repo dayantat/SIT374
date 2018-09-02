@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Sit374</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html> <head>
+<title><%= full_title(yield(:title)) %></title>
+<%= render 'layouts/rails_default' %>
+<%= render 'layouts/shim' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head> <body>
+    <%= render 'layouts/header' %>
 
-  <body>
+    <div class="container">
+        <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <% end %>
     <%= yield %>
-  </body>
-</html>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %> <!--  the code doesn't get accepted in production or tests -->
+    </div>
+</body> </html>
