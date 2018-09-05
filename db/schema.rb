@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_072728) do
+ActiveRecord::Schema.define(version: 2018_09_05_071249) do
+
+  create_table "states", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email"
+    t.bigint "current_score"
+    t.bigint "highest_score"
+    t.bigint "budget"
+    t.bigint "stage"
+    t.bigint "rank"
+    t.bigint "point"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
