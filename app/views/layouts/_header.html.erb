@@ -1,6 +1,7 @@
+<!-- Created by Dayan Tatlock, Through the guidence of Micheal Hartl via his Ruby On Rails Tutorial 4th Edition -->
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-   <%= link_to "sample app", root_path, id: "logo" %> <nav>
+   <%= link_to "Cyber Security Training", root_path, id: "logo" %> <nav>
        <ul class="nav navbar-nav navbar-right">
            <li><%= link_to "Home", root_path %></li>
            <li><%= link_to "Help", help_path %></li>
@@ -21,6 +22,12 @@
                 </li>
             <% else %>
                 <li><%= link_to "Log in", login_path %></li>
+                <!--<li><%= form_for(:session, url: login_path) do |f| %>
+                <%= f.label :email %>
+                <%= f.email_field :email, class: 'form-control' %>
+                <%= f.label :password %>
+                <%= f.password_field :password, class: 'form-control' %>
+                <%= f.submit "Log in", class: "btn btn-primary" %> <% end %> </li> -->
             <% end %>
 
         </ul>
