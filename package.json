@@ -1,11 +1,16 @@
 {
-  "name": "sample_app",
-  "private": true,
+  "name": "SIT374PD",
+  "private": false,
   "dependencies": {
     "jquery": "^3.3.1"
   },
   "devDependencies": {
     "webpack": "^4.17.2",
     "webpack-dev-server": "^3.1.8"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dayantat/SIT374ProjectDesign.git",
+  "author": "Dayan Tatlock",
+  "license": "None"
 }
